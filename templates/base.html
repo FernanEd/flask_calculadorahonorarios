@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    * + * {
+      margin-top: 1rem;
+    }
+
+    html, body{
+      font-family: 'Arial';
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+    }
+
+    input[type=submit], button{
+      padding: 0.25rem 0.5rem;
+      border: 0;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      box-shadow: 1px 1px 3px 1px #00000066;
+    }
+
+    input[type=submit]:hover, button:hover{
+      box-shadow: 1px 1px 1px 1px #00000022;
+    }
+
+    .error{
+      color: #f38;
+    }
+  </style>
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>

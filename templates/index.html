@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content  %}
+  <h1>Calcular honorarios</h1>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div>
+      {{form.honorarios.label}}
+      <br>
+      {{form.honorarios()}}
+    </div>
+
+    <div>
+      {% for error in form.honorarios.errors %}
+    <span class='error'>{{ error }}</span>
+      {% endfor %}
+    </div>
+    
+
+    {{form.submit()}}
+  </form>
+{% endblock %}
