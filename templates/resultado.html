@@ -3,9 +3,13 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content  %}
-  <h1>Neto:</h1>
-  <p>a</p>
-
+  <h1>Resultados</h1>
+  <p><strong>IVA: </strong> {{calculos.iva}}</p>
+  <p><strong>Retención de IVA: </strong> {{calculos.r_iva}}</p>
+  <p><strong>Retención de ISR: </strong> {{calculos.r_isr}}</p>
+  <p><strong>Honorarios: </strong> {{calculos.honorarios}}</p>
+  <hr>
+  <p><strong>Neto: </strong> {{calculos.neto}}</p>
   <br>
   <a href="/"><button>Volver</button></a>
 {% endblock %}
